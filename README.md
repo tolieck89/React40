@@ -1,12 +1,4 @@
-# React + Vite
-
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Привіт!
+Тут ти знайдеш одразу два завдання: 
+1) commit "hw-40 according to lms numeration"  - це 40 лекція по LMS  https://lms.ithillel.ua/groups/66a3ba1684150597717a9a48/lessons/66a3ba1684150597717a9a7f
+2) commit "hw-42 according to lms numeration"  - 42 лекція по роутнгу по LMS https://lms.ithillel.ua/groups/66a3ba1684150597717a9a48/lessons/66a3ba1684150597717a9a81
