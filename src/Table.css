@@ -1,0 +1,25 @@
+.tableContainer{
+    display: flex;
+    flex-direction: column;
+    /* gap: 3px; */
+    margin: 0 auto;
+
+
+
+}
+
+.rowTable {
+    display: grid;
+    gap: 10px;
+    justify-content: space-between;
+    width: auto;
+    border: 1px solid gray;
+    grid-template-columns: 1fr 1.2fr 1.2fr 1.2fr;
+    justify-items: left;
+    padding-left: 8px;
+    align-items: center;
+}
+
+.actions{
+    justify-self: center;
+}
