@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react';
 import CreateRow from './Actions/CreateRow.jsx' 
 import "./Table.css"
 import CustomModal from './Actions/CustomModal';
-import { Modal } from 'antd';
-import AddEntry from "./Actions/AddEntry.jsx"
+
+import { BrowserRouter as Router, Routes, Route, Link, Navigate} from 'react-router-dom';
 
 function Table() {
   const [people, setPeople] = useState([]);
@@ -21,8 +21,7 @@ function Table() {
     fetchData();
     console.log(people);
   }, []);
-
-
+  
   const updatePerson = (index, updatedPerson) => {
     setPeople([...people, addPerson]);
   };
@@ -36,13 +35,10 @@ function Table() {
     setPeople(newPeople); 
     console.log(people);
   }
-
-
+  
   const handleEdit = () => {
     setIsModalOpen(true);
   };
-
-
 
   const handleClose = () => {
     setIsModalOpen(false);
@@ -60,7 +56,6 @@ function Table() {
     }
   };
 
- 
   return (
     <>          
 
@@ -88,8 +83,6 @@ function Table() {
         initialValues={false}
        />
 
-       
-        
     </>
   );
 }

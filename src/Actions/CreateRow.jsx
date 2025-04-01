@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import { Modal } from 'antd';
 import CustomModal from './CustomModal';
-import Deletion from "./Deletion";
+import { BrowserRouter as Router, Routes, Route, Link, Navigate, NavLink} from 'react-router-dom';
+import showDeleteConfirm from "./ModalConfirmation";
+
 
 const CreateRow = ({ person, index, onUpdate }) => {
   const [isModalOpen, setIsModalOpen] = useState(false); 
@@ -28,23 +30,32 @@ const CreateRow = ({ person, index, onUpdate }) => {
     }
   };
 
+  const handleDelete = (event) => {
+    const targetDiv = event.target.closest("[data-id]"); 
+    showDeleteConfirm(targetDiv);
+  }    
     return (
     <>
-
+      
       <div className="rowTable" data-id={index + 1}>
-        <div className="username">{person.username}</div>
+      <Link to={`/user/${person.id}`}>
+      <div className="username">{person.username}</div>
+      </Link> 
         <div className="name">{person.name}</div>
+        {console.log(person)}
         <div className="phone">{person.phone}</div>
         <div className="actions">
-          <button type="button" onClick={Deletion}>Delete</button>
+          <button type="button" onClick={handleDelete}>Delete</button>
           <button type="button" onClick={handleEdit}>Edit</button>
         </div>
       </div>
-
+      
       <CustomModal
         isModalOpen={isModalOpen}
         handleOk={handleOk} 
         handleCancel={handleClose}
+        onSave={handleSave} 
+      
         title={"Edit existing row"}
         initialValues={person}
 

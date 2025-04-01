@@ -1,5 +1,6 @@
 import { Form, Input, Modal } from "antd";
 import { useEffect, useState } from "react";
+import "../Table.css"
 
 
 const CustomModal = ({ isModalOpen, handleOk, handleCancel, title, initialValues }) => {
@@ -10,8 +11,6 @@ const CustomModal = ({ isModalOpen, handleOk, handleCancel, title, initialValues
       form.setFieldsValue(initialValues || { name: "", username: "", phone: "" });
     }
   }, [isModalOpen, initialValues, form]);
-
-
 
 
   return (
